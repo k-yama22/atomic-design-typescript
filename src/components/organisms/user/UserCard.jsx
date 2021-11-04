@@ -18,8 +18,8 @@ export const UserCard = (props) => {
         <dd>{user.website}</dd>
       </SDl>
     </Card>
-  )
-}
+  );
+};
 
 const SDl = styled.dl`
   text-align: left;
