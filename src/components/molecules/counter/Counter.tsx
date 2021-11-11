@@ -3,14 +3,15 @@ import { PrimaryButton } from "../../atoms/button/PrimaryButton";
 import { SecondaryButton } from "../../atoms/button/SecondaryButton";
 
 const Counter: React.FC<{}> = () => {
-  const [value, setValue] = useState<number>(0);
+  const initialValue: any = 0;
+  const [value, setValue] = useState<number>(initialValue);
 
   const increment = () => {
-    setValue(value + 1);
+    setValue((prevState) => prevState + 1);
   };
 
   const decrement = () => {
-    setValue(value - 1);
+    setValue((prevState) => prevState - 1);
   };
 
   return (
