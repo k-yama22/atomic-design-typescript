@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import Counter from "./components/molecules/counter/Counter";
+import CounterWithReducer from "./components/molecules/counter/CounterWithReducer";
 import { Router } from "./router/Router";
 
 interface AppProps {
@@ -11,7 +11,7 @@ const App: React.FunctionComponent<AppProps> = ({ message }) => {
   return (
     <>
       <div>
-        <Counter />
+        <CounterWithReducer />
       </div>
       <Router />;
     </>
