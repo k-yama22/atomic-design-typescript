@@ -1,3 +1,4 @@
+import { Button, ChakraProvider } from "@chakra-ui/react";
 import React from "react";
 import "./App.css";
 import CounterWithReducer from "./components/molecules/counter/CounterWithReducer";
@@ -10,10 +11,13 @@ interface AppProps {
 const App: React.FunctionComponent<AppProps> = ({ message }) => {
   return (
     <>
-      <div>
-        <CounterWithReducer />
-      </div>
-      <Router />;
+      <ChakraProvider>
+        <div>
+          <CounterWithReducer />
+        </div>
+        <Button colorScheme="teal">ボタン</Button>
+        <Router />;
+      </ChakraProvider>
     </>
   );
 };
